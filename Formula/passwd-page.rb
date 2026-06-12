@@ -5,13 +5,13 @@
 class PasswdPage < Formula
   desc "Zero-knowledge secret sharing for humans and agents"
   homepage "https://passwd.page"
-  version "3.0.1"
+  version "3.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.1/passwd_3.0.1_darwin_amd64.tar.gz"
-      sha256 "655c1d8573b7a7ab84b831dd4314ea46a7463e3c4f13c40a3d4b78ab48c8e9e5"
+      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.2/passwd_3.0.2_darwin_amd64.tar.gz"
+      sha256 "dfcb169b7198fbae023e77543f4cd2bad1641f1ed0738e98ec1b721ae868759e"
 
       define_method(:install) do
         bin.install "passwd-page"
@@ -19,8 +19,8 @@ class PasswdPage < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.1/passwd_3.0.1_darwin_arm64.tar.gz"
-      sha256 "e1cf8af3f3dc41ed0bfa1e0fd75a129913feadf8c1a77d6f15346ac930ee6d83"
+      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.2/passwd_3.0.2_darwin_arm64.tar.gz"
+      sha256 "1e717a244873f1203bcb58b30cee4b121db339e8aeaebe2afb9598ffb3837cb8"
 
       define_method(:install) do
         bin.install "passwd-page"
@@ -31,16 +31,16 @@ class PasswdPage < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.1/passwd_3.0.1_linux_amd64.tar.gz"
-      sha256 "353f2c82f4f911a95e1b2c8e0ef66a6d98daa8174c966930f7f5794d118a3d09"
+      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.2/passwd_3.0.2_linux_amd64.tar.gz"
+      sha256 "10d82f2d361055d67e25533b482b0bd21a14f4749b7884cdb59d23a4a9ff596d"
       define_method(:install) do
         bin.install "passwd-page"
         bin.install "passwd-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.1/passwd_3.0.1_linux_arm64.tar.gz"
-      sha256 "9dc9403691b12bf3c82138dbbc8fad5cf25b332a6bc5f00f932f4059b082ed2a"
+      url "https://github.com/davidfeldi/passwd-page/releases/download/v3.0.2/passwd_3.0.2_linux_arm64.tar.gz"
+      sha256 "1a522ee42431c047907c5321863b7d99516e1b67b5bc11b968be33d5cbd3ab6f"
       define_method(:install) do
         bin.install "passwd-page"
         bin.install "passwd-mcp"
